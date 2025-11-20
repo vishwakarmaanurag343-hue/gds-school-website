@@ -22,10 +22,10 @@ export const TestimonialSection = () => {
         // Reset scroll when reaching the end of the first set of items (for infinite loop illusion)
         // We assume we duplicate content or just scroll back to 0 for simplicity in this MVP
         if (scrollContainer.scrollLeft >= (scrollContainer.scrollWidth - scrollContainer.clientWidth)) {
-           scrollContainer.scrollLeft = 0;
-           scrollAmount = 0;
+          scrollContainer.scrollLeft = 0;
+          scrollAmount = 0;
         } else {
-           scrollContainer.scrollLeft += speed;
+          scrollContainer.scrollLeft += speed;
         }
       }
       animationFrameId = requestAnimationFrame(scroll);
@@ -52,16 +52,16 @@ export const TestimonialSection = () => {
             <h2 className="text-4xl font-heading font-bold text-deep mb-4">What Our Parents Say</h2>
             <p className="text-slate-500 text-lg font-light">Real experiences from the families who make our community special.</p>
           </div>
-          
+
           {/* Manual Controls */}
           <div className="flex gap-3 mt-6 md:mt-0">
-            <button 
+            <button
               onClick={() => scrollManual('left')}
               className="w-12 h-12 rounded-full border border-slate-200 bg-white text-slate-600 hover:bg-royal hover:text-white hover:border-royal transition-all flex items-center justify-center shadow-sm hover:shadow-lg"
             >
               <ChevronLeft size={20} />
             </button>
-            <button 
+            <button
               onClick={() => scrollManual('right')}
               className="w-12 h-12 rounded-full border border-slate-200 bg-white text-slate-600 hover:bg-royal hover:text-white hover:border-royal transition-all flex items-center justify-center shadow-sm hover:shadow-lg"
             >
@@ -72,7 +72,7 @@ export const TestimonialSection = () => {
       </div>
 
       {/* Carousel Track */}
-      <div 
+      <div
         className="w-full overflow-x-auto no-scrollbar pb-12 px-4 md:px-0"
         ref={scrollRef}
         onMouseEnter={() => setIsHovered(true)}
@@ -82,7 +82,7 @@ export const TestimonialSection = () => {
         <div className="flex gap-8 w-max px-4 md:px-[max(1rem,calc((100vw-1200px)/2))]">
           {/* Render Items Twice for loop feel (basic implementation) */}
           {[...TESTIMONIALS_DATA, ...TESTIMONIALS_DATA].map((item, index) => (
-            <div 
+            <div
               key={`${item.id}-${index}`}
               className="w-[85vw] md:w-[400px] apple-glass p-8 rounded-[2rem] relative group hover:-translate-y-2 transition-transform duration-500 flex-shrink-0 bg-white/60 backdrop-blur-xl border-white/50"
             >
@@ -93,12 +93,12 @@ export const TestimonialSection = () => {
 
               <div className="flex items-center gap-4 mb-6 relative z-10">
                 <div className="relative">
-                    <div className="absolute inset-0 bg-royal/20 rounded-full blur-md transform group-hover:scale-110 transition-transform" />
-                    <img 
-                      src={item.image} 
-                      alt={item.name} 
-                      className="w-14 h-14 rounded-full object-cover border-2 border-white shadow-sm relative z-10"
-                    />
+                  <div className="absolute inset-0 bg-royal/20 rounded-full blur-md transform group-hover:scale-110 transition-transform" />
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                    className="w-14 h-14 rounded-full object-cover border-2 border-white shadow-sm relative z-10"
+                  />
                 </div>
                 <div>
                   <h4 className="font-bold text-deep text-lg leading-tight group-hover:text-royal transition-colors">{item.name}</h4>
@@ -109,7 +109,7 @@ export const TestimonialSection = () => {
               <p className="text-slate-600 leading-relaxed font-light text-sm md:text-base relative z-10 italic">
                 "{item.quote}"
               </p>
-              
+
               {/* Decorative Bottom Gradient */}
               <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-1 bg-gradient-to-r from-royal/0 via-royal/40 to-royal/0 w-0 group-hover:w-1/2 transition-all duration-700 opacity-0 group-hover:opacity-100 rounded-full" />
             </div>

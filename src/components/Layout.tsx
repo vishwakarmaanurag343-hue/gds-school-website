@@ -1,16 +1,15 @@
+// src/components/Layout.tsx
 import React, { useState, useEffect } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink, useLocation, Outlet } from 'react-router-dom';
 import { Menu, X, Phone, Mail, MapPin, Facebook, Twitter, Instagram, Youtube, GraduationCap } from 'lucide-react';
 import { NAV_LINKS, SCHOOL_NAME } from '../constants';
 import { FloatingActions } from './FloatingActions';
 
-
 interface LayoutProps {
-  children: React.ReactNode;
   onEnquire: () => void;
 }
 
-export const Layout: React.FC<LayoutProps> = ({ children, onEnquire }) => {
+export const Layout: React.FC<LayoutProps> = ({ onEnquire }) => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
@@ -61,8 +60,6 @@ export const Layout: React.FC<LayoutProps> = ({ children, onEnquire }) => {
               className="h-12 w-auto group-hover:scale-105 transition-transform duration-300"
             />
           </NavLink>
-
-
 
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-8">
@@ -121,7 +118,8 @@ export const Layout: React.FC<LayoutProps> = ({ children, onEnquire }) => {
 
       {/* Main Content */}
       <main className="flex-grow">
-        {children}
+        {/* Render nested route content here */}
+        <Outlet />
       </main>
 
       {/* Footer */}

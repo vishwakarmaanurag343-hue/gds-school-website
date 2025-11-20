@@ -24,11 +24,14 @@ export const EnquiryModal: React.FC<Props> = ({ forceOpen, onClose }) => {
       return;
     }
 
-    // Removed localStorage check for testing purposes so it opens every time
-    const timer = setTimeout(() => {
-      setIsOpen(true);
-    }, 3000);
-    return () => clearTimeout(timer);
+    const hasSeen = sessionStorage.getItem('hasSeenEnquiryModal');
+    if (!hasSeen) {
+      const timer = setTimeout(() => {
+        setIsOpen(true);
+        sessionStorage.setItem('hasSeenEnquiryModal', 'true');
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
   }, [forceOpen]);
 
   const handleSubmit = async (e: React.FormEvent) => {

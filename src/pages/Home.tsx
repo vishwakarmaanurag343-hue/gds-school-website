@@ -253,6 +253,6 @@ export const Home: React.FC<Props> = ({ onEnquire }) => {
 
       {/* Testimonials Section (New) */}
       <TestimonialSection />
-    </div>
+    </div >
   );
 };

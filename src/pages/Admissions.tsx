@@ -10,44 +10,44 @@ export const Admissions = () => {
       <div className="bg-deep text-white py-24 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-royal/10 blur-3xl" />
         <div className="absolute bottom-0 left-0 w-1/2 h-full bg-sky/5 blur-3xl" />
-        
+
         <div className="container mx-auto px-4 relative z-10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-16">
-             <div className="md:w-1/2">
-               <div className="inline-block px-3 py-1 rounded-full border border-white/20 bg-white/5 text-xs font-bold uppercase tracking-widest mb-6 text-sky-200">
-                 Academic Year 2025-2026
-               </div>
-               <h1 className="text-5xl md:text-6xl font-bold font-heading mb-6 leading-tight">
-                 Begin Your <br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-200 to-white">Journey</span> at GDS
-               </h1>
-               <p className="text-slate-300 text-lg leading-relaxed font-light max-w-lg">
-                 We welcome applications from families who value academic excellence and character development. Apply online today.
-               </p>
-             </div>
-             <div className="md:w-1/2 flex justify-center">
-                <div className="apple-glass-dark rounded-full p-12">
-                   <Admissions3D />
-                </div>
-             </div>
+            <div className="md:w-1/2">
+              <div className="inline-block px-3 py-1 rounded-full border border-white/20 bg-white/5 text-xs font-bold uppercase tracking-widest mb-6 text-sky-200">
+                Academic Year 2025-2026
+              </div>
+              <h1 className="text-5xl md:text-6xl font-bold font-heading mb-6 leading-tight">
+                Begin Your <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-200 to-white">Journey</span> at GDS
+              </h1>
+              <p className="text-slate-300 text-lg leading-relaxed font-light max-w-lg">
+                We welcome applications from families who value academic excellence and character development. Apply online today.
+              </p>
+            </div>
+            <div className="md:w-1/2 flex justify-center">
+              <div className="apple-glass-dark rounded-full p-12">
+                <Admissions3D />
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
       <div className="container mx-auto px-4 py-20">
         <div className="grid lg:grid-cols-12 gap-10">
-          
+
           {/* Main Form Column */}
           <div className="lg:col-span-8">
-             <div className="mb-10">
-               <h2 className="text-3xl font-bold text-deep font-heading mb-3">Application Form</h2>
-               <p className="text-slate-500 font-light">Please complete all sections accurately. You can save and resume later.</p>
-             </div>
-             <AdmissionForm />
+            <div className="mb-10">
+              <h2 className="text-3xl font-bold text-deep font-heading mb-3">Application Form</h2>
+              <p className="text-slate-500 font-light">Please complete all sections accurately. You can save and resume later.</p>
+            </div>
+            <AdmissionForm />
           </div>
 
           {/* Sidebar Info */}
           <div className="lg:col-span-4 space-y-8">
-            
+
             {/* Steps */}
             <div className="apple-glass p-8 rounded-[2rem]">
               <h3 className="font-bold text-deep mb-6 text-lg font-heading">Admissions Process</h3>
@@ -103,12 +103,12 @@ export const Admissions = () => {
               <p className="text-sm text-white/80 mb-8 relative z-10 font-light">Our admissions team is available Mon-Fri, 8:30 AM - 4:00 PM.</p>
               <div className="space-y-3 relative z-10">
                 <div className="flex items-center gap-3 bg-white/10 p-3 rounded-xl backdrop-blur-sm border border-white/10">
-                   <Phone size={16} />
-                   <span className="font-medium text-sm">+1 (555) 123-4567</span>
+                  <Phone size={16} />
+                  <span className="font-medium text-sm">+1 (555) 123-4567</span>
                 </div>
                 <div className="flex items-center gap-3 bg-white/10 p-3 rounded-xl backdrop-blur-sm border border-white/10">
-                   <Mail size={16} />
-                   <span className="font-medium text-sm">admissions@gds.edu</span>
+                  <Mail size={16} />
+                  <span className="font-medium text-sm">admissions@gds.edu</span>
                 </div>
               </div>
             </div>
