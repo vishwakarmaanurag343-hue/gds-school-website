@@ -10,6 +10,7 @@ import express from 'express';
 import mysql from 'mysql2';
 import cors from 'cors';
 import bodyParser from 'body-parser';
+import morgan from "morgan"
 
 dotenv.config();
 
@@ -19,6 +20,7 @@ const PORT = 5000;
 // Middleware
 app.use(cors());
 app.use(bodyParser.json());
+app.use(morgan("dev"))
 
 // // IP Restriction Middleware
 // const checkAllowedIP = (req, res, next) => {

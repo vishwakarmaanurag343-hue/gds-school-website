@@ -14,7 +14,7 @@ const App = () => {
   const [enquiryOpen, setEnquiryOpen] = useState(false);
 
   return (
-    <Router basename="/gds-school-website">
+    <Router>
       <EnquiryModal forceOpen={enquiryOpen} onClose={() => setEnquiryOpen(false)} />
 
       <Routes>

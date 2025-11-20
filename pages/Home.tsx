@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Hero3D } from '../components/Hero3D';
+// import { Hero3D } from '../components/Hero3D';
 import { StatsSection } from '../components/StatsSection';
 import { DiscoveryHub } from '../components/DiscoveryHub';
 import { ParentsAppSection } from '../components/ParentsAppSection';
@@ -58,7 +58,7 @@ export const Home: React.FC<Props> = ({ onEnquire }) => {
             </motion.div>
 
             <div className="relative flex justify-center md:justify-end">
-              <Hero3D />
+              {/* <Hero3D /> */}
             </div>
           </div>
         </div>
