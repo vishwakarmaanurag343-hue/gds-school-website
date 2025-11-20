@@ -2,21 +2,38 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches: [ main ]
+
+# Allow the workflow to push commits and update Pages
+permissions:
+  contents: write
+  pages: write
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+
+      - name: Use Node.js 🔢
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
 
       - name: Install and Build 🔧
         run: |
           npm ci
           npm run build
 
+      - name: List dist (for debugging) 🔎
+        run: |
+          echo "Contents of dist:"
+          ls -la dist || true
+
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: dist
+          branch: gh-pages
+          token: ${{ secrets.GITHUB_TOKEN }}
