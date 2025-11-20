@@ -4,6 +4,7 @@ import { NavLink, useLocation, Outlet } from 'react-router-dom';
 import { Menu, X, Phone, Mail, MapPin, Facebook, Twitter, Instagram, Youtube, GraduationCap } from 'lucide-react';
 import { NAV_LINKS, SCHOOL_NAME } from '../constants';
 import { FloatingActions } from './FloatingActions';
+import logo from '../assets/gds-logo.svg';
 
 interface LayoutProps {
   onEnquire: () => void;
@@ -55,7 +56,7 @@ export const Layout: React.FC<LayoutProps> = ({ onEnquire }) => {
         <div className="container mx-auto px-4 flex items-center justify-between">
           <NavLink to="/" className="flex items-center gap-3 group">
             <img
-              src="/gds-logo.svg"
+              src={logo}
               alt="GDS Logo"
               className="h-12 w-auto group-hover:scale-105 transition-transform duration-300"
             />
