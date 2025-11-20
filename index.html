@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GDS - Nurturing Curious Minds</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              royal: '#0A6CFF', // Primary Action Blue
+              sky: '#E0F2FE',   // Very subtle background blue
+              deep: '#04122B',  // Brand Dark Blue (Text/Footer)
+              slate: {
+                50: '#F8FAFC',
+                100: '#F1F5F9',
+                800: '#1E293B',
+                900: '#0F172A',
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              heading: ['Poppins', 'sans-serif'],
+            },
+            animation: {
+              'float': 'float 8s ease-in-out infinite',
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-15px)' },
+              }
+            },
+            boxShadow: {
+              'soft': '0 10px 40px -10px rgba(0, 0, 0, 0.08)',
+              'glow': '0 0 20px rgba(10, 108, 255, 0.15)',
+            }
+          },
+        },
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #F8FAFC;
+        /* Subtle warm/cool mesh for glass to interact with */
+        background-image: 
+          radial-gradient(at 0% 0%, hsla(215, 98%, 61%, 0.03) 0px, transparent 50%),
+          radial-gradient(at 100% 0%, hsla(256, 100%, 95%, 1) 0px, transparent 50%),
+          radial-gradient(at 100% 100%, hsla(242, 100%, 98%, 1) 0px, transparent 50%);
+        background-attachment: fixed;
+        color: #1E293B;
+        overflow-x: hidden;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Poppins', sans-serif;
+        color: #04122B;
+      }
+      
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #CBD5E1; 
+        border-radius: 4px;
+        border: 2px solid #F8FAFC;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #94A3B8; 
+      }
+
+      /* Apple-style Glass Classes */
+      .apple-glass {
+        background: rgba(255, 255, 255, 0.65);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05);
+      }
+      
+      .apple-glass-dark {
+        background: rgba(4, 18, 43, 0.85);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+      }
+
+      .apple-button {
+        background: #0A6CFF; /* Fallback */
+        background: linear-gradient(145deg, #0A6CFF, #0055D4);
+        color: white;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 4px 14px 0 rgba(10, 108, 255, 0.3);
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      }
+      .apple-button:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 6px 20px rgba(10, 108, 255, 0.25);
+        filter: brightness(1.05);
+      }
+
+      .hover-lift {
+        transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+      }
+      .hover-lift:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+
+<link rel="stylesheet" href="/index.css">
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.6",
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.24",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/gds-school-website/assets/index-DZEiPLwP.js"></script>
+</head>
+  <body>
+    <div id="root"></div>
+</body>
+</html>
