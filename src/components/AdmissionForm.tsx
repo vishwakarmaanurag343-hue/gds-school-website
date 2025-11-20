@@ -92,7 +92,7 @@ export const AdmissionForm = () => {
           {[1, 2, 3, 4].map((s) => (
             <div key={s} className="flex items-center">
               <div className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold transition-all duration-500 ${step === s ? 'bg-royal text-white shadow-lg shadow-royal/30 scale-110' :
-                  step > s ? 'bg-green-500 text-white' : 'bg-white border border-slate-200 text-slate-300'
+                step > s ? 'bg-green-500 text-white' : 'bg-white border border-slate-200 text-slate-300'
                 }`}>
                 {step > s ? <Check size={16} /> : s}
               </div>
@@ -139,7 +139,7 @@ export const AdmissionForm = () => {
               />
               <div>
                 <label className="block text-xs font-bold text-slate-500 mb-2 uppercase tracking-wider">Gender</label>
-                <div className="flex gap-4">
+                <div className="flex flex-col sm:flex-row gap-4">
                   <label className={`flex items-center justify-center gap-2 cursor-pointer px-6 py-3.5 rounded-xl border transition-all shadow-sm flex-1 ${formData.gender === 'Male' ? 'bg-white border-royal text-royal' : 'bg-white/40 border-white/60 hover:bg-white'}`}>
                     <input
                       type="radio"

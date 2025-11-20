@@ -7,17 +7,17 @@ export const Admissions = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Area */}
-      <div className="bg-deep text-white py-24 relative overflow-hidden">
+      <div className="bg-deep text-white py-12 md:py-24 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-royal/10 blur-3xl" />
         <div className="absolute bottom-0 left-0 w-1/2 h-full bg-sky/5 blur-3xl" />
 
         <div className="container mx-auto px-4 relative z-10">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-16">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-10 md:gap-16">
             <div className="md:w-1/2">
               <div className="inline-block px-3 py-1 rounded-full border border-white/20 bg-white/5 text-xs font-bold uppercase tracking-widest mb-6 text-sky-200">
                 Academic Year 2025-2026
               </div>
-              <h1 className="text-5xl md:text-6xl font-bold font-heading mb-6 leading-tight">
+              <h1 className="text-4xl md:text-6xl font-bold font-heading mb-6 leading-tight">
                 Begin Your <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-200 to-white">Journey</span> at GDS
               </h1>
               <p className="text-slate-300 text-lg leading-relaxed font-light max-w-lg">
@@ -33,7 +33,7 @@ export const Admissions = () => {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-20">
+      <div className="container mx-auto px-4 py-12 md:py-20">
         <div className="grid lg:grid-cols-12 gap-10">
 
           {/* Main Form Column */}
